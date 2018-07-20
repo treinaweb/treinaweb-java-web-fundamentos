@@ -21,6 +21,15 @@
 		<servlet-name>EscrevaSeuNomeServlet</servlet-name>
 		<url-pattern>/escrevaSeuNome</url-pattern>
 	</servlet-mapping>
+	<!-- ** Servlet mostrar o nome do usuário -->
+	<servlet>
+		<servlet-name>ReceberMensagemServlet</servlet-name>
+		<servlet-class>br.com.treinaweb.agenda.servlets.ReceberMensagemServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReceberMensagemServlet</servlet-name>
+		<url-pattern>/receberMensagem</url-pattern>
+	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 		<welcome-file>index.htm</welcome-file>
