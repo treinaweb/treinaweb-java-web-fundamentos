@@ -1,6 +1,8 @@
 package br.com.treinaweb.agenda.fx;
 
+import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -98,7 +100,15 @@ public class MainController implements Initializable {
 		Optional<ButtonType> resultadoConfirmacao = confirmacao.showAndWait();
 		if (resultadoConfirmacao.isPresent() && resultadoConfirmacao.get() == ButtonType.OK) {
 			AgendaRepositorio<Contato> repositorioContato = new ContatoRepositorio();
-			repositorioContato.excluir(this.contatoSelecionado);
+			try {
+				repositorioContato.excluir(this.contatoSelecionado);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			carregarTabelaContatos();
 			this.tabelaContatos.getSelectionModel().selectFirst();
 		}
