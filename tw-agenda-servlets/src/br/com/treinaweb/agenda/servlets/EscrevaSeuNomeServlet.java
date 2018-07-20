@@ -16,8 +16,7 @@ public class EscrevaSeuNomeServlet extends HttpServlet {
 	private static final long serialVersionUID = 6121551722317697209L;
 
 	@Override
-	protected void service(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out = response.getWriter();
 		out.println("<html>");
 		out.println("	<head>");
@@ -25,12 +24,14 @@ public class EscrevaSeuNomeServlet extends HttpServlet {
 		out.println("	</head>");
 		out.println("	<body>");
 		out.println("		<form action=\"/tw-agenda-servlets/receberMensagem\">");
-		out.println("			<p>Escreva seu nome: <p>");
-		out.println("			<p><input type=\"text\" name=\"nomeUsuario\"><p>");
-		out.println("			<p><button type=\"submit\">Enviar!</button><p>");
+		out.println("			<p>Digite seu nome:</p>");
+		out.println("			<p><input type=\"text\" name=\"nomeUsuario\"></p>");
+		out.println("			<p><button type=\"submit\">Enviar!</button></p>");
 		out.println("		</form>");
 		out.println("	</body>");
 		out.println("</html>");
 	}
+	
+	
 
 }

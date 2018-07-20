@@ -1,41 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
-	id="WebApp_ID" version="3.1">
-	<display-name>tw-agenda-servlets</display-name>
-	<servlet>
-		<servlet-name>HelloServlet</servlet-name>
-		<servlet-class>br.com.treinaweb.agenda.servlets.HelloServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>HelloServlet</servlet-name>
-		<url-pattern>/hello</url-pattern>
-	</servlet-mapping>
-	<!-- ** Servlet para que o usuário digite seu nome -->
-	<servlet>
-		<servlet-name>EscrevaSeuNomeServlet</servlet-name>
-		<servlet-class>br.com.treinaweb.agenda.servlets.EscrevaSeuNomeServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>EscrevaSeuNomeServlet</servlet-name>
-		<url-pattern>/escrevaSeuNome</url-pattern>
-	</servlet-mapping>
-	<!-- ** Servlet mostrar o nome do usuário -->
-	<servlet>
-		<servlet-name>ReceberMensagemServlet</servlet-name>
-		<servlet-class>br.com.treinaweb.agenda.servlets.ReceberMensagemServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>ReceberMensagemServlet</servlet-name>
-		<url-pattern>/receberMensagem</url-pattern>
-	</servlet-mapping>
-	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-		<welcome-file>index.htm</welcome-file>
-		<welcome-file>index.jsp</welcome-file>
-		<welcome-file>default.html</welcome-file>
-		<welcome-file>default.htm</welcome-file>
-		<welcome-file>default.jsp</welcome-file>
-	</welcome-file-list>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>tw-agenda-servlets</display-name>
+  <servlet>
+  	<servlet-name>HelloServlet</servlet-name>
+  	<servlet-class>br.com.treinaweb.agenda.servlets.HelloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>HelloServlet</servlet-name>
+  	<url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  
+  <!-- ** Servlet para que o usuário digite seu nome -->
+  <servlet>
+  	<servlet-name>EscrevaSeuNomeServlet</servlet-name>
+  	<servlet-class>br.com.treinaweb.agenda.servlets.EscrevaSeuNomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>EscrevaSeuNomeServlet</servlet-name>
+  	<url-pattern>/escrevaSeuNome</url-pattern>
+  </servlet-mapping>
+  
+  <!--  ** Servlet para mostrar o nome do usuário -->
+  <servlet>
+  	<servlet-name>ReceberMensagemServlet</servlet-name>
+  	<servlet-class>br.com.treinaweb.agenda.servlets.ReceberMensagemServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ReceberMensagemServlet</servlet-name>
+  	<url-pattern>/receberMensagem</url-pattern>
+  </servlet-mapping>
+  
+  <!-- ** Servlet de mensagem  -->
+  <servlet>
+  	<servlet-name>MensagemServlet</servlet-name>
+  	<servlet-class>br.com.treinaweb.agenda.servlets.MensagemServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>MensagemServlet</servlet-name>
+  	<url-pattern>/mensagem</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
 </web-app>
