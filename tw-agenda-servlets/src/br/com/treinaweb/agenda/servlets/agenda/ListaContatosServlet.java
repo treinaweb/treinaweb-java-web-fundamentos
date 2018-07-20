@@ -21,22 +21,19 @@ public class ListaContatosServlet extends HttpServlet {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 3704698039659899753L;
+	private static final long serialVersionUID = -6421634283572317094L;
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		AgendaRepositorio<Contato> agendaRepositorio = new ContatoRepositorioJdbc();
 		try {
 			List<Contato> contatos = agendaRepositorio.selecionar();
-			req.setAttribute("listaContatos", contatos);
+			req.setAttribute("listaContatos", contatos);			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			req.setAttribute("mensagemErro", e.getMessage());
 		}
 		RequestDispatcher dispatcher = req.getServletContext().getRequestDispatcher("/WEB-INF/paginas/agenda/listaContatos.jsp");
 		dispatcher.forward(req, resp);
 	}
-	
-	
 
 }

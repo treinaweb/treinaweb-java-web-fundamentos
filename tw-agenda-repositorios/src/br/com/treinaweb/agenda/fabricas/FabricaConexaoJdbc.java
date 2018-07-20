@@ -17,6 +17,7 @@ public class FabricaConexaoJdbc {
 		}
 		Properties props = new Properties();
 		props.load(is);
+		DriverManager.registerDriver(new com.mysql.jdbc.Driver());
 		Connection conexao = DriverManager.getConnection(props.getProperty("urlConexao"), 
 				props.getProperty("usuarioConexao"), props.getProperty("senhaConexao"));
 		return conexao;
