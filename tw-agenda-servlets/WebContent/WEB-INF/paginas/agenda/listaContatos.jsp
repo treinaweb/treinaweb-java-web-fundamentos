@@ -25,12 +25,14 @@
 					<td>${contato.nome}</td>
 					<td>${contato.idade}</td>
 					<td>${contato.telefone}</td>
-					<td><a href="agenda/editar?id=${contato.id}">Editar</a> | <a
-						href="agenda/excluir?id=${contato.id}">Excluir</a></td>
+					<td>
+						<a href="${pageContext.request.contextPath}/agenda/editar?id=${contato.id}">Editar</a> | 
+						<a href="${pageContext.request.contextPath}/agenda/excluir?id=${contato.id}">Excluir</a>
+					</td>
 				</tr>
 			</jstl:forEach>
 		</tbody>
 	</table>
-	<a href="agenda/incluir">Criar novo contato...</a>
+	<a href="${pageContext.request.contextPath}/agenda/incluir">Criar novo contato...</a>
 </body>
 </html>
